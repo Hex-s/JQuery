@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<style>
+	.act{width:185px; height:135px; float:left; margin-left:20px; margin-top:10px;}
+	.info{width:185px; height:135px;background-color:#ACFFD6; opacity:0.6; position:relative;}
+</style>
+<body>
+<div>
+	<div style="width:103px; height:26px;"><img src="images/mainspr_15.png" /></div>
+    <div style="height:135px; overflow:hidden;">
+    	<div class="act">
+        	<img src="images/1388482548_1436653066_24958_sSmallImgFile.jpg">
+            <div class="info">活动简介<br><p>lol全明星投票以正<br />式开始，每日投票可<br />抽取精美皮肤</p></div>
+        </div>
+        <div class="act">
+        	<img src="images/1388405659_1436653066_10041_sSmallImgFile.jpg" />
+             <div class="info">活动简介<br><p>现在开通英雄联盟招行信<br />用卡，享受三重大礼：好<br />礼一，活动期间成功办理</p></div>
+        </div>
+        <div class="act">
+        	<img src="images/1396804927_1436653066_580_sSmallImgFile.jpg" />
+             <div class="info">活动简介<br><p>欢迎入驻全国高校排行榜<br />参与"我要入驻高校"<br />及"校园大使招募"活动</p></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	//隐藏
+	
+	//显示
+	$(".act").mouseenter(function(){
+		$(this).find("div:first").animate({
+			"marginTop": "-135px"	
+		},1000);	
+	}).mouseleave(function(){
+		$(this).find("div:first").animate({
+			"marginTop": "0px"	
+		},1000);	
+	});
+</script>
+</html>

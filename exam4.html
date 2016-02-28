@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<div id="div1">first div</div>
+<div id="div2">second div</div>
+<div>third div</div>
+<div class="menuBar"></div>
+<div class="menuOption"></div>
+<form action="#" method="post" id="frm">
+	<div>
+        <input type="text" name="nameTxt" />
+        <input type="password" name="pwdTxt" />
+        <input type="text" name="emailTxt" />
+        <input type="button" value="press" />
+    </div>
+</form>
+<div id="chkDiv">
+    <input type="checkbox" value="a" />a
+    <input type="checkbox" value="b" checked="checked" />b
+    <input type="checkbox" value="c" />c
+    <input type="checkbox" value="d" />d
+</div>
+<hr />
+<select id="sel">
+	<option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c" selected="selected">c</option>
+</select>
+
+<body>
+<script>
+//获取页面中具备id属性的div对象
+//alert($("div[id]").size());
+//获取id值为div1的对象
+//alert($("div[id=div1]").html());
+//获取所有包含类样式并且以menu前缀的div
+//$("div[class^=menu]").each(function(){
+//	alert(this.className);	
+//})
+//获取所有name以Txt结尾的input标签
+//$("input[name$=Txt]").each(function(){
+//	alert(this.name);	
+//})
+//或者input标签中name属性包含a字母的标签
+//$("input[name*=a]").each(function(){
+//	alert(this.name);	
+//})
+
+//获取id为frm的表单中的所有文本框标签
+//alert($("#frm input[type=text]").size());
+//可以使用:加上表单元素的type值匹配对应的表单元素
+//alert($(":checkbox").size())
+
+//获取所有选中的复选框
+//alert($("#chkDiv :checkbox:checked").val());
+//获取选中的下拉列表选项
+//alert($("#sel>option:selected").val())
+
+//表示获取id为tab中第一行列中包含未选中的复选框的第二列
+//$("#tab>tbody>tr:first>td:has(:checkbox:not(:checked)):eq(1)");
+</script>
+
+</body>
+</html>

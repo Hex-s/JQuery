@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="../lol site/jquery-1.6.js"></script>
+<style>
+/*页卡样式*/
+.tabButton{ float:left; cursor:pointer}
+.tabContent{ width:390px; height:200px; background-color:#2A303F}
+.tabContent div{ width:300px; height:40px; background-color:#14171F; color:#0F0; text-align:center; line-height:40px; position:relative; left:44px; top:20px}
+</style>
+<body>
+<!-- 页卡切换 -->
+<div>
+	<!--页卡按钮-->
+	<div>
+    	<div class="tabButton"><img src="../lol site/images/mainspr_11.png" /><img src="../lol site/images/mainspr_20.png" /></div>
+        <div class="tabButton"><img src="../lol site/images/mainspr_13.png" /><img src="../lol site/images/mainspr_08.png" /></div>
+        <div class="tabButton"><img src="../lol site/images/mainspr_19.png" /><img src="../lol site/images/mainspr_26.png" /></div>
+        <div class="tabButton"><img src="../lol site/images/mainspr_22-11.png" /><img src="../lol site/images/mainspr_04.png" /></div>
+        <div style="clear:both"></div>
+    </div>
+    <!--页卡内容-->
+    	<div class="tabContent">
+        	<div>综合内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>论坛内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>公告内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>媒体内容</div>
+        </div>
+       </div>
+    	
+    </div>
+</div>
+</body>
+
+<script>
+	//隐藏点亮图标
+	$(".tabButton img:odd").hide();
+	$(".tabButton img:eq(0)").hide();
+	$(".tabButton img:eq(1)").show();
+	$(".tabContent:gt(0)").hide();
+	//点击切换图标
+	$(".tabButton").each(function(i){
+		
+		$(this).mouseenter(function(){
+			
+			$(this).find("img:first").hide();
+			$(this).find("img:last").show();
+			
+			$(".tabButton").not($(this)).find("img:odd:visible").hide();
+			$(".tabButton").not($(this)).find("img:even:not(:visible)").show();	
+			
+			//切换叶卡
+			$(".tabContent:eq("+i+")").show();
+			$(".tabContent:not(:eq("+i+"))").hide();
+		});
+		
+			
+	});
+	
+
+</script>
+</html>

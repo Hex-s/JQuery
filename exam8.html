@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<style>
+.menu{float:left; width:118px; height:30px; text-align:center; line-height:30px; position:relative; top:-90px}
+</style>
+<body>
+<!-- 自定义动画实现轮辐广告 -->
+<div style="width:590px; height:280px; white-space:nowrap; overflow:hidden"  id="ad">
+	<img src="images/1.jpg"/><img src="images/2.jpg" /><img src="images/3.jpg" /><img src="images/4.jpg" /><img src="images/5.jpg" />
+    <div style="height:30px; background-color:#069; position:relative; top:-30px; opacity:0.5"></div>
+    <!--滑动按钮-->
+    <div id="overMenu" style="width:118px; height:30px; position:relative; top:-60px; background-color:#09F"></div>
+    <div>
+   		<div class="menu">1</div>
+        <div class="menu">2</div>
+        <div class="menu">3</div>
+        <div class="menu">4</div>
+        <div class="menu">5</div>
+    </div>
+   
+</div>
+</body>
+<script>
+//function changeImg(){
+//	$("#ad").append($("#ad>img:first")).remove($("#ad>img:first"));
+//	window.setTimeout("changeImg()",1000);
+//}
+//changeImg();
+
+var imgWidth = -590;
+var i = 0;
+function changeImg(){
+	//累计动画的次数
+	i++;
+	if(i > 4){
+		i = 0;
+	}
+	$("#ad>img:first").delay(1000).stop().clearQueue().animate({
+		"marginLeft":imgWidth*i
+	},1000);
+	//滚动滑动按钮层
+	$("#overMenu").animate({
+		"marginLeft":118*i
+	},1000);
+	window.setTimeout("changeImg()",2000);
+}
+changeImg();
+
+</script>
+</html>

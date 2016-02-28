@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<style>
+.txt-style{ border:1px solid red; width:150px; height:25px; font-size:12px}
+.lightBg{ background-color:#CCC }
+</style>
+<body>
+<input type="text" id="txt" value="niit" class="txt-style"/>
+<input type="button" value="press" id="btn" />
+<div style="width:300px; height:300px; background-color:#999; position:absolute; left:400px; top:200px">
+ 	<div id="div" style="width:100px; height:100px; background-color:#099; position:relative; left:50px; top:60px"></div>
+</div>
+<table border="1" width="300" height="200px" id="tab">
+	<tr>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td></td>
+    </tr><tr>
+    	<td></td>
+    </tr>
+</table>
+<script>
+//获取txt标签的相关属性
+//var $obj = $("#txt");
+//alert($obj.attr("id"));
+//alert($obj.attr("value"));
+//alert($obj.attr("class"));
+//设置属性的值通过键值对访问
+//$obj.val("hello");
+//$obj.attr("value","hello");
+//attr还能批量对属性的值进行设置
+//$obj.attr({"value":"wellcome","id":"txtHello","class":"txt_style"});
+//alert($obj.attr("id"));
+
+//获取层相对于浏览器的左边距
+//alert($("#div").offset().left);
+//获取层的上边距
+//alert($("#div").offset().top);
+//获取层相对于当前容器的左边距
+//alert($("#div").position().left);
+
+//设置层的边距
+//$("#div").offset({"left":320,"top":220});
+
+//获取层的宽高
+//alert($("#div").width());
+//alert($("#div").height());
+//设置宽高
+//$("#div").width(200);
+
+//添加已有的类样式
+//$("#txt").addClass("txt-style");
+//移除样式
+//$("#txt").removeClass("txt-style");
+
+//为表格所有行添加鼠标进入的事件，mouseenter用来代替js中的onmouseover事件，mouseleaver用来代替onmouseout事件
+//$("#tab>tbody>tr").mouseenter(function(){
+//	
+//})
+
+//实现表格行的光棒效果
+//$("#tab>tbody>tr").hover(function(){
+//	$(this).addClass("lightBg");
+//	$("#tab>tbody>tr").not($(this)).removeClass("lightBg");
+//})
+
+//$("#tab>tbody>tr").each(function(){
+//	$(this).mouseenter(function(){
+		//toggleClass表示如果存在样式则删除该样式，如果不存在则作用该样式
+//		$(this).toggleClass("lightBg");
+//	})
+//})
+
+//获取指定的样式属性值
+//alert($("#txt").css("font-size"));
+//在google浏览器中访问样式表中的样式
+//var obj = document.getElementById("txt");
+//alert(window.getComputedStyle(obj,null).width);
+
+//对样式进行修改
+//$("#txt").css("width","200px");
+//批量修改样式
+//$("#txt").css({"color":"red","width":"300"});
+
+//获取btn按钮并添加事件
+$("#btn").click(function(){
+	alert($("#txt").val());	
+})
+//手动触发事件
+$("#btn").click();
+</script>
+</body>
+</html>

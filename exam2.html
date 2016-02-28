@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<body>
+<div class="myDiv" id="div">
+	第一个层
+    <div>
+    	<p>段落1.1</p>
+    </div>
+</div>
+<input type="text" value="a"/>
+<div class="myDiv">
+	第二个层
+    <p>段落2.1</p>
+    <p>段落2.2</p>
+</div>
+<div>
+	第三个层
+    <input type="text" value="b" />
+</div>
+<table id="tab" border="1" width="100" height="100">
+	<tr>
+    	<td>a</td>
+    	<td>
+        	<table border="1" width="50" height="50">
+            	<tr>
+                	<td><div>b1</div></td>
+                </tr>
+                <tr>
+                	<td><div>b2</div></td>
+                </tr>
+                <tr>
+                	<td><div>b3</div></td>
+                </tr>
+            </table>
+        </td>
+        <td>c</td>
+    </tr>
+    <tr>
+    	<td><div>d</div></td>
+        <td><div>e</div></td>
+        <td>f</td>
+    </tr>
+    <tr>
+    	<td>g</td>
+        <td>h</td>
+        <td>i</td>
+    </tr>
+</table>
+
+<script>
+//遍历所有div标签中的p标签
+//$(".myDiv p").each(function(){
+//	alert($(this).html());
+//});
+
+//>表示获取父元素的下一层子元素
+//$(".myDiv>p").each(function(){
+//	alert($(this).html());	
+//})
+
+//获取id为tab表格中直接包含的层
+//alert($("#tab>tbody>tr>td>div").size());
+//$("#tab>tbody>tr>td>div").each(function(){
+//	alert($(this).html());	
+//})
+
+//获取id为tab表格中的所有的层
+//alert($("#tab div").size());
+
+//获取下一个相邻的同级标签
+//alert($("#div+input").size());
+//alert($("#div+div").html());
+
+//获取所有指定的同级标签对象
+//alert($("#div~input").val());
+
+//获取页面中第一个层
+//alert($("div:first").html());
+//获取作用了myDiv样式中直接包含的第一个P标签
+//alert($(".myDiv>p:first").html())
+
+//获取id为tab表格中第一行最后列中包含的div
+//alert($("#tab>tbody>tr:first>td:last div").html());
+
+//获取id为tab的表格中所有的偶数行
+//$("#tab>tbody>tr:even").each(function(){
+//	alert($(this).html());	
+//})
+//获取所有奇数列
+//$("#tab>tbody>tr>td:odd").each(function(){
+//	alert($(this).html());	
+//})
+
+//获取第二行的内容
+//alert($("#tab>tbody>tr:eq(1)").html());
+
+//获取第二行中第一列后面的所有列
+//$("#tab>tbody>tr:eq(1)>td:gt(0)").each(function(){
+//	alert($(this).html());	
+//})
+//使用not匹配不满足条件的对象
+//$("#tab>tbody>tr:eq(1)>td:not(:eq(0))").each(function(){
+//	alert($(this).html());
+//})
+
+//获取第一行中小于第3列的所有内容
+//$("#tab>tbody>tr:first>td:lt(2)").each(function(){
+//	alert($(this).html());	
+//})
+
+//获取表格中包含的子表格的最后行内的前2列的html内容
+//$("#tab>tbody>tr>td table>tbody>tr:last>td:lt(2)")
+</script>
+</body>
+</html>

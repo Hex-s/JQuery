@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<body>
+<div id="div" style="width:150px; height:150px; background-color:#F00; position:absolute; top:50px"></div>
+<input type="button" value="show" id="btn" />
+<script>
+//绑定按钮的点击事件实现层的显示
+$("#btn").click(function(){
+	////如果是显示按钮
+	if(this.value == "show"){
+		//show方法可以通过fast,normal,slow设置显示动画的相应时间
+		//也可以通过设置毫秒值来控制时间
+		//$("#div").show(2000);
+		$(this).val("hide");
+	    //层下拉方式的显示
+		//$("#div").slideDown("slow");
+		//渐变方式的显示
+		//$("#div").fadeIn();
+		$("#div").fadeTo("slow",0.1);
+	}
+	else{
+		//隐藏
+		//$("#div").hide(2000);
+		$(this).val("show");	
+		
+		//下拉方式的隐藏
+		//$("#div").slideUp("slow");
+		$("#div").fadeOut();
+	}
+
+	//隐藏和显示的切换
+	//$("#div").toggle("slow");
+	//$("#div").slideToggle();
+
+})
+
+//jQuery可以使用链式方式操作对象
+//animate表示自定义动画的设置
+//delay方法表示设置多个动画之间的延迟时间
+$("#div").animate({
+	"left":"300px",
+	"width":"100px",
+	"height":"100px"
+},2000).delay(2000).animate({
+	"top":"+=200"
+},2000);
+</script>
+</body>
+</html>

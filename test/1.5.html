@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+</head>
+<script src="../lol site/jquery-1.6.js"></script>
+<body>
+<div id="selDiv">
+	<input type="button" value="全选" id="btnSel"/>
+    <input type="checkbox" value="1" />1
+     <input type="checkbox" value="2" />2
+      <input type="checkbox" value="3" />3
+</div>
+</body>
+<script>
+	$("#btnSel").click(function(){
+		if(this.value == "全选"){
+			$("#selDiv :input:gt(0)").attr("checked",true);
+			$(this).val("取消全选");	
+		}
+		else{
+			$("#selDiv :input:gt(0)").attr("checked",false);
+			$(this).val("全选");	
+		}
+	});
+</script>
+</html>

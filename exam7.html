@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+*{ font-size:13px }
+/*下拉菜单样式*/
+.navigator{float:left }
+.navigator a{display:block; width:170px; height:30px; text-align:center; line-height:30px; text-decoration:none; background-color:#EFEFEF; color:#000; border-bottom:1px solid #D1D1D1}
+/*按钮图片切换样式*/
+.buttonStyle{ float:left; width:121px; height:108px; cursor:pointer}
+/*页卡样式*/
+.tabButton{ float:left; cursor:pointer}
+.tabContent{ width:392px; height:200px; background-color:#2A303F}
+.tabContent div{ width:300px; height:40px; background-color:#14171F; color:#0F0; text-align:center; line-height:40px; position:relative; left:44px; top:20px}
+/*头像覆盖样式*/
+.headDiv{ float:left; width:80px; height:80px}
+.headBg{ width:80px; height:80px;}
+.overDiv{ width:80px; height:80px; background-color:#060; opacity:0.6; position:relative; top:-80px;}
+</style>
+<script src="jquery-1.6.js"></script>
+<body>
+<!-- 下拉菜单 -->
+<div>
+	<!--<div class="navigator" onmouseover="navigatorEnter(this)">-->
+    <div class="navigator">
+    	<div><a href="#">关于中信</a></div>
+        <div>
+        	<a href="#">公司简介</a>
+            <a href="#">集团领导</a>
+            <a href="#">领导题词</a>
+        </div>
+    </div>
+    <div class="navigator">
+    	<div><a href="#">公司业务</a></div>
+        <div>
+        	<a href="#">金融</a>
+            <a href="#">非金融</a>
+        </div>
+    </div>
+    <div class="navigator">
+    	<div><a href="#">公益事业</a></div>
+        <div>
+        	<a href="#">扶贫介</a>
+            <a href="#">绿化</a>
+            <a href="#">扶藏</a>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+<!-- 按钮图片的切换 -->
+<div id="buttonDiv">
+	<div style="background-image:url(images/public-v2_01.png); width:227px; height:108px; float:left;" class="buttonStype"></div>
+    <div class="buttonStyle"><img src="images/public-v2_03.png" /><img src="images/public-v2_09.png" /></div>
+    <div class="buttonStyle"><img src="images/public-v2_05.png" /><img src="images/public-v2_11.png" /></div>
+    <div class="buttonStyle"><img src="images/public-v2_07.png" /><img src="images/public-v2_13.png" /></div>
+    <div style="clear:both"></div>
+</div>
+<!--可以通过backgroundposition来调整背景图的位置-->
+<!--<div style=" width:121px; height:108px; background-image:url(images/public-v2.png); background-position:-593px 0px"></div>-->
+
+<!-- 复选框全选 -->
+<div id="selDiv">
+	<input type="button" value="全选" id="btnSel"/>
+    <input type="checkbox" value="blue" />蓝色
+    <input type="checkbox" value="red" />红色
+    <input type="checkbox" value="green" />绿色
+    <input type="checkbox" value="yellow" />黄色
+</div>
+
+<!-- 页卡切换 -->
+<div>
+	<!--页卡按钮-->
+	<div>
+    	<div class="tabButton"><img src="images/mainspr_11.png" /><img src="images/mainspr_20.png" /></div>
+        <div class="tabButton"><img src="images/mainspr_13.png" /><img src="images/mainspr_08.png" /></div>
+        <div class="tabButton"><img src="images/mainspr_19.png" /><img src="images/mainspr_26.png" /></div>
+        <div class="tabButton"><img src="images/mainspr_22-11.png" /><img src="images/mainspr_04.png" /></div>
+        <div style="clear:both"></div>
+    </div>
+    <!--页卡内容-->
+    <div>
+    	<div class="tabContent">
+        	<div>综合内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>论坛内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>公告内容</div>
+        </div>
+        <div class="tabContent">
+        	<div>媒体内容</div>
+        </div>	
+    </div>
+</div>
+
+<!-- 图片覆盖 -->
+<div>
+	<div>
+        <div class="headDiv">
+        	<img src="images/19_Web_0.jpg" class="headBg"/>
+            <div class="overDiv"></div>
+        </div>
+        <div class="headDiv">
+        	<img src="images/34_Web_0.jpg" class="headBg"/>
+        	<div class="overDiv"></div>    
+        </div>
+        <div class="headDiv">
+        	<img src="images/38_Web_0.jpg" class="headBg" />
+            <div class="overDiv"></div> 
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+    	<div class="headDiv">
+        	<img src="images/55_Web_0.jpg" class="headBg" />
+            <div class="overDiv"></div> 
+        </div>
+        <div class="headDiv">
+        	<img src="images/59_Web_0.jpg" class="headBg" />
+            <div class="overDiv"></div> 
+        </div>
+        <div class="headDiv">
+        	<img src="images/60_Web_0.jpg" class="headBg" />
+            <div class="overDiv"></div> 
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    
+</div>
+
+<!-- 下拉加载数据的效果 -->
+<div id="content">
+	<div  style="height:1000px; background-color:#FF9"></div>
+</div>
+
+<!-- 广告覆盖动画效果 -->
+</body>
+<script>
+/**********按钮图片的切换************/
+//隐藏所有的菜单层
+$(".navigator>div:odd").hide();
+//$(".navigator").each(function(){
+//	//查找每个导航层中的第二个层，即菜单层
+//	$(this).find("div:eq(1)").hide();	
+//})
+
+
+//通过编写方法实现层的显示
+//function navigatorEnter(obj){
+//	$(obj).find("div:eq(1)").show();
+//}
+//导航层添加鼠标进入事件，将当前导航层中的菜单层显示
+//添加鼠标离开事件，将当前菜单层隐藏
+//$(".navigator").mouseenter(function(){
+//	//显示子菜单
+//	$(this).find("div:eq(1)").slideDown();
+//}).mouseleave(function(){
+//	$(this).find("div:eq(1)").slideUp();
+//})
+//添加鼠标进入事件
+$(".navigator").mouseenter(function(){
+	//显示子菜单
+	$(this).find("div:eq(1)").slideDown();
+	//除当前菜单层以外，其他已经显示的菜单层都隐藏
+	$(".navigator").not($(this)).each(function(){
+		$(this).find("div:eq(1):visible").slideUp();
+	})
+});
+
+
+/************按钮图片的切换*************/
+//隐藏所有的点亮图片
+$("#buttonDiv img:odd").hide();
+//添加鼠标进入事件
+$(".buttonStyle").mouseenter(function(){
+	//将第一张图片隐藏
+	$(this).find("img:first").hide();
+	//第二张图片显示
+	$(this).find("img:last").show();
+	//将除自身以外的当前已经点亮的图片隐藏
+//	$(".buttonStyle").not($(this)).find("img:odd:visible").hide();
+//	同时对该图片进行切换
+//	$(".buttonStyle").not($(this)).find("img:even:hidden").show();
+
+	//$(".buttonStyle").not($(this)).each(function(){
+//		$(this).find("img:eq(1):visible").hide();
+//		$(this).find("img:eq(0):hidden").show();	
+//	})
+
+	//将当前已经显示的隐藏，将前一个图片显示
+	//$(".buttonStyle").not($(this)).find("img:odd:visible").hide().prev().show();
+	//将当前已经显示的隐藏，获取其父标签对象再获取第一个图片进行显示
+	$(".buttonStyle").not($(this)).find("img:odd:visible").hide().parent().find("img:eq(0)").show();
+});
+
+/***********页卡切换*************/
+//隐藏页卡按钮
+$(".tabButton:gt(0)>img:odd").hide();
+$(".tabButton:first>img:first").hide();
+//隐藏页卡内容
+$(".tabContent:gt(0)").hide();
+//添加鼠标进入事件
+//$(".tabButton").mouseenter(function(){
+//	//隐藏选项按钮中的第一个图片，显示选项按钮中的第二个图片
+//	$(this).find("img:eq(0)").hide().next().show();
+//	//除当前选项按钮外的其他层中的第二个已经显示的图片进行隐藏,并对前一个图片进行显示
+//	$(".tabButton").not($(this)).find("img:odd:visible").hide().prev().show();
+//});
+$(".tabButton").each(function(index){
+	$(this).mouseenter(function(){
+		//隐藏第一个图片并显示第二个图片
+		$(this).find("img:first").hide().next().show();
+		//除当前选项按钮外的其他层中的第二个已经显示的图片进行隐藏,并对前一个图片
+		$(".tabButton").not($(this)).find("img:odd:visible").hide().prev().show();
+		//显示对应的页卡内容层
+		$(".tabContent:eq("+index+")").show();
+		//其余页卡层隐藏
+		$(".tabContent:not(:eq("+index+"))").hide();
+	});
+})
+
+/************全选全不选效果*************/
+//$("#btnSel").click(function(){
+//	if(this.value == "全选"){
+//		$(this).val("全不选");
+//		//选中所有的复选框
+//		$("#selDiv :checkbox:not(:checked)").each(function(){
+//			this.checked = true;	
+//		})	
+//	}
+//	else{
+//		$(this).val("全选");
+//		$("#selDiv :checkbox:checked").each(function(){
+//			this.checked = false;	
+//		});
+//		//$("#selDiv :checkbox:checked").each(function(){
+////			//alert(this.value);	
+////		})
+//	}	
+//})
+
+/************头像覆盖图片的切换**************/
+//隐藏所有的覆盖层
+$(".overDiv").hide();
+//当鼠标进入头像层时显示当前的覆盖层，同时将其他的覆盖层隐藏
+$(".headDiv").mouseenter(function(){
+	$(this).find("div").show();
+	$(".overDiv").not($(this).find("div")).hide();
+}).mouseleave(function(){
+	$(this).find("div").hide();	
+});
+
+/**************动态加载数据****************/
+var i = 0;
+//上一次拉动的距离
+var oldTop = 0;
+//标识滚动的方向
+var flag = "down";
+//标识需要加载数据的距离值,此时表示每向下拉动500像素加载一页数据
+var length = 300;
+$(document).scroll(function(){
+	i++;
+	//追加内容
+	//$("#content").append("<table border=1 width=200 height=80><tr><td>"+i+"</td></tr></table>");
+	
+	//判断滚动条向下或者向上拉动
+	//记录当前拉动的距离
+	var top = $(this).scrollTop();
+	if(oldTop < top){
+		//$("#content").html("向下滚动");
+		flag = "down";	
+	}
+	else{
+		//$("#content").html("向上滚动");
+		flag = "up";	
+	}
+	//记录滚动后的距离
+	oldTop = top;
+	//判断滚动的方向,只有向下滚动时才需要加载数据
+	if(flag == "down"){
+		if(top >= length){
+			length+=300;
+			$("#content").find("div").html(top);
+			$("#content").append("<table border=1 width=200 height=200><tr><td>"+i+"</td></tr></table>");
+		}
+	}
+})
+
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+.divStyle{color:blue; font-size:13px}
+</style>
+<script src="../jquery-1.6.js"></script>
+
+<body>
+
+<div id="testDiv" class="myDiv">第一个层
+	<p id="p1">第一个层内的第一个段落</p>
+    <p id="p2">第一个层内的第二个段落</p>
+</div>
+<div class="myDiv">第二个层
+	<p>第二个层内的段落</p>
+</div>
+<div>第三个层
+	<select id="course">
+    	<option value="java">Java</option>
+        <option value="js">JavaScript</option>
+        <option value="jQuery">JQuery</option>
+    </select>
+    <input type="button" id="btn"/>
+</div>
+<p>层外的段落</p>
+<input type="text" value="niit" id="txt" />
+</body>
+
+<script>
+/*var $obj = $(".myDiv p");
+//获取对象中元素的长度
+alert($obj.html());
+$obj.each(function(){
+	alert(this.innerHTML);	
+});
+*/
+$("#btn").val("press");
+$("#btn").click(function(){
+	
+	alert($("#course").val());	
+});
+</script>
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link type="text/css" rel="stylesheet" href="styles.css" />
+<title>无标题文档</title>
+
+</head>
+<script src="jquery-1.6.js"></script>
+
+<body>
+	<div id="content">
+		<!--页眉-->
+		<div id="head">
+			<div id="nav_left" style="float:left; padding-left:20px">
+				<li><a href="#" style="margin-left:30px;">官网首页</a></li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">游戏资料</a>
+					<div id="headMenu1" style="position:absolute; display:none; ">
+						<a href="#">新手指引</a>
+						<a href="#">游戏介绍</a>
+						<a href="#">资料库</a>
+						<a href="#">战争学院</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">LOL商城</a>
+					<div id="headMenu2" style="position:absolute; display:none;">
+						<a href="#">点券充值</a>
+						<a href="#">道具城</a>
+						<a href="#">拍拍商城</a>
+						<a href="#">CDKey兑换</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">用户互动</a>
+					<div id="headMenu3" style="position:absolute; display:none;">
+						<a href="#">个人中心</a>
+						<a href="#">官方论坛</a>
+						<a href="#">官方微博</a>
+						<a href="#">官方微信</a>
+					</div>
+				</li>
+			</div>
+			<div id="nav_right" style="float:left; margin-left:270px">
+				<li>
+					<a href="#" style="margin-left:20px;" onmouseover="headMenuOver(this)">赛事活动</a>
+					<div id="headMenu4" style="position:absolute; display:none; margin-left:10px;">
+						<a href="#">赛事中心</a>
+						<a href="#">活动中心</a>
+						<a href="#">LPL职业联赛</a>
+						<a href="#">高校联赛</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">自助系统</a>
+					<div id="headMenu5" style="position:absolute; display:none;">
+						<a href="#">声望系统</a>
+						<a href="#">封号查询</a>
+						<a href="#">Q游助手</a>
+						<a href="#">体验服申请</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">客服信息</a>
+					<div id="headMenu6" style="position:absolute; display:none;">
+						<a href="#">常见问题</a>
+						<a href="#">QQ在线客服</a>
+						<a href="#">防沉迷验证</a>
+						<a href="#">用户协议</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onmouseover="headMenuOver(this)">LOL荣誉</a>
+					<div id="headMenu7" style="width:430px; height:410px; background-image:url(images/glory.png); position:absolute; margin-left:-340px; display:none; margin-top:10px; padding-top:60px; padding-left:10px; background-repeat:no-repeat;">
+						<table border="0" width="410" cellpadding="0" cellspacing="0" style="color:#CCCCCC">
+							<tr height="40">
+								<td><img src="images/glory_pcgamer.png"/></td>
+								<td style="padding-left:10px">2012年2月 2011 PC-Gamer年度更新游戏奖</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_top10.png" align="middle"/></td>
+								<td valign="top" style="padding-left:10px">2012年1月 2011中国游戏风云榜"十大新锐网络游戏"、"十大最受欢迎网络游戏"、"最佳休闲竞技类网游"</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_fengyu.png" align="middle"/></td>
+								<td valign="top" style="padding-left:10px">2012年1月 2011中国网游风云榜"中国年度最受欢迎网络游戏"、"中国年度最受欢迎2.5D网络游戏"、"中国年度最佳策略战略网游"、"中国年度推荐网游"</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_gamespy.png" align="middle"/></td>
+								<td style="padding-left:10px">2012年1月 Game Spy玩家投票"2011年度多人竞技游戏"</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_jinling.png" align="middle"/></td>
+								<td style="padding-left:10px">2011年11月 金翎奖"玩家最期待的网络游戏"</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_jyg.png" align="middle"/></td>
+								<td style="padding-left:10px">2010年11月 金摇杆奖"年度最佳网络游戏"</td>
+							</tr>
+							<tr height="40">
+								<td><img src="images/glory_gdc.png" align="middle"/></td>
+								<td style="padding-left:10px">2010年10月 包揽GDC 2010五项大奖</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style="padding-left:10px">
+									■Audience Award 玩家最佳选择<br />
+									■Best Online Technology 最佳网络游戏开发技术
+								</td>
+							</tr>
+						</table>
+					</div>	
+				</li>
+			</div>
+		</div>
+		<!-- 公告栏 -->
+		<div style="margin-top:-100px">
+			<!--导航-->
+			<div style="height:108px" id="menu">
+				<div id="m1" style="width:227px;background-image:url(images/public-v2_01.png); cursor:pointer"></div>
+				<div id="m2" style="background-image:url(images/public-v2_03.png); cursor:pointer" onmouseover="changeBG(this,menuOver[0])" onmouseout="changeBG(this,menuOut[0])"></div>
+				<div id="m3" style="background-image:url(images/public-v2_05.png); cursor:pointer" onmouseover="changeBG(this,menuOver[1])" onmouseout="changeBG(this,menuOut[1])"></div>
+				<div id="m4" style="background-image:url(images/public-v2_07.png); cursor:pointer" onmouseover="changeBG(this,menuOver[2])" onmouseout="changeBG(this,menuOut[2])"></div>
+				<!--登陆-->
+				<div id="login" style="height:108px; width:388px; background:url(images/public-v2_15_02.png);">
+					<div style="width:120px; height:108px; float:left; background:url(images/public-v2_15_06.png) no-repeat center"></div>
+					<!--登陆框-->
+					<div style="width:268px; height:108px; float:left;">
+						<div style="color:#FFFFFF; width:268px; height:30px; margin-top:10px">
+							亲爱的召唤师，欢迎<span class="loginFont">登陆</span>
+						</div>
+						<hr color="#000000" width="90%" size="1px" />
+						<div style="width:268px; height:60px; font-size:12px ">
+							<span style="color:#B9B9B9">登陆后查看自己的英雄联盟游戏信息，包括</span><br />
+							<span style="color:#FFFFFF">召唤师等级、游戏胜场数、账户信息、声望值等</span>
+						</div>
+					</div>
+				</div>
+				<!--登陆结束-->
+			</div>
+			<!--导航结束-->
+			<!--轮辐广告和公告-->
+			<div style="height:280px;">
+				<!--轮辐广告-->
+				<div style="float:left; width:590px; height:280px; margin-top:10px; white-space:nowrap; overflow:hidden;">
+					<div id="ad">
+						<a href="#"><img src="images/1.jpg" width="590" height="280" border="0"></a><a href="#"><img src="images/2.jpg" border="0"></a><a href="#"><img src="images/3.jpg" border="0"></a><a href="#"><img src="images/4.jpg" border="0"></a><a href="#"><img src="images/5.jpg" border="0"></a>
+					</div>
+				</div>
+				<!--公告栏-->
+				<div style="float:left; width:406px; height:280px; margin-top:10px">
+					<!--公告菜单蓝-->
+					<div style="height:43px">
+						<div class="notice_menu" style="background-image:url(images/mainspr_11.png)" onmouseover="switchContent(this,noticeOver[0],'contentPart','synthesisContent')" onmouseout="switchContent(this,noticeOut[0]),'contentPart','synthesisContent'"></div>
+						<div class="notice_menu" style="background-image:url(images/mainspr_19.png)" onmouseover="switchContent(this,noticeOver[1],'contentPart', 'noticeContent')" onmouseout="switchContent(this,noticeOut[1],'contentPart','noticeContent')"></div>
+						<div class="notice_menu" style="background-image:url(images/mainspr_13.png)" onmouseover="switchContent(this,noticeOver[2],'contentPart', 'bbsContent')" onmouseout="switchContent(this,noticeOut[2],'contentPart', 'bbsContent')"></div>
+						<div class="notice_menu" style="background-image:url(images/mainspr_22-11.png)" onmouseover="switchContent(this,noticeOver[3],'contentPart', 'mediaContent')" onmouseout="changeBG(this,noticeOut[3],'contentPart', 'mediaContent')"></div>
+					</div>
+					<!--公告内容-->
+					<div id="contentPart">
+						<div  id="synthesisContent" style="height:237px; width:388px; background-color:#2C3241">
+							<a href="#" style="color:#00FFBF; display:block; height:35px; width:350px; background-color:#161821; text-decoration:none; line-height:35px; text-align:center; position:absolute; margin-top:15px; margin-left:15px;">邀父母观战，LOL架起两代人沟通桥梁</a>
+							<table id="notice_table" width="350" border="0" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:60px; margin-left:15px">
+								<tr height="25">
+									<td width="40"><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">英雄联盟LPL夏季赛八大豪强战队巡礼</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">阵容匹配系统灰度更新公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">重量级对抗今日上演 笑笑小楼助阵LSPL主题日</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">2014LPL夏季赛现场门票发售观赛指南</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">6月12日凌晨1点停机版本更新公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[新闻]</a></td>
+									<td><a href="#" class="news-title">LSPL主题日开放 两级别联赛队伍联袂献战</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr>
+									<td colspan="3" align="right"><a href="#" class="news-type">查看更多</a></td>
+								</tr>
+							</table>				
+						</div>
+						<div id="noticeContent" style="height:237px; width:388px; background-color:#2C3241; display:none;">
+							<a href="#" style="color:#00FFBF; display:block; height:35px; width:350px; background-color:#161821; text-decoration:none; line-height:35px; text-align:center; position:absolute; margin-top:15px; margin-left:15px;">班德尔城、裁决之地大区23：00临时停机维护公告</a>
+							<table id="notice_table" width="350" border="0" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:60px; margin-left:15px">
+								<tr height="25">
+									<td width="40"><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">6月20日免费英雄更换公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">6月19日凌晨1点“雷瑟守备、诺克萨斯”停机</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">军团答题系统服务暂停通知</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">教育网大区23:30临时停机维护公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">皮城警备大区20:30临时停机维护公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[公告]</a></td>
+									<td><a href="#" class="news-title">比尔吉沃特大区21:30临时停机维护公告</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr>
+									<td colspan="3" align="right"><a href="#" class="news-type">查看更多</a></td>
+								</tr>
+							</table>				
+						</div>
+						<div id="mediaContent" style="height:237px; width:388px; background-color:#2C3241; display:none;">
+							<a href="#" style="color:#00FFBF; display:block; height:35px; width:350px; background-color:#161821; text-decoration:none; line-height:35px; text-align:center; position:absolute; margin-top:15px; margin-left:15px;">充满坎坷的电竞路 EDG战队背后的故事</a>
+							<table id="notice_table" width="350" border="0" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:60px; margin-left:15px">
+								<tr height="25">
+									<td width="40"><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">从剑舞红颜笑到Xiaoxiao 中国电竞幕后史</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">美测服6.18变动：新版召唤师峡谷露真容</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">v4.10补丁：豹女蝎子重做 AD装增强</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">在LOL中运筹帷幄 用智商赢得胜利</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">21条真理！献给掉进青铜的朋友们</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[综合]</a></td>
+									<td><a href="#" class="news-title">3年苦痛终上白银 专访电1资深青铜小学生</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr>
+									<td colspan="3" align="right"><a href="#" class="news-type">查看更多</a></td>
+								</tr>
+							</table>				
+						</div>
+						<div id="bbsContent" style="height:237px; width:388px; background-color:#2C3241; display:none;">
+							<a href="#" style="color:#00FFBF; display:block; height:35px; width:350px; background-color:#161821; text-decoration:none; line-height:35px; text-align:center; position:absolute; margin-top:15px; margin-left:15px;">英格兰与法国你更支持谁？皮肤公仔等着你</a>
+							<table id="notice_table" width="350" border="0" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:60px; margin-left:15px">
+								<tr height="25">
+									<td width="40"><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">妩媚性感 LOL足球宝贝软妹子来袭</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">德玛西亚世界杯亮相，五大热门阵容</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">PE、EP荣耀保卫战继续打响，对手能否逆袭？</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">萌妹子手绘合集 阿狸性感到爆啦！</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">幸运女神在微笑 大神一起游戏吧！</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#" class="news-type">[论坛]</a></td>
+									<td><a href="#" class="news-title">敢不敢比一比？神马皮肤让你最得意?</a></td>
+									<td><a href="#" class="news-type">06/12</a></td>
+								</tr>
+								<tr>
+									<td colspan="3" align="right"><a href="#" class="news-type">查看更多</a></td>
+								</tr>
+							</table>				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--中间部分 -->
+		<div style="height:900px;">
+			<!--左边层-->
+			<div style=" width:590px; float:left; margin-top:40px">
+				<!--第一部分-->
+				<div style="height:161px;">
+					<div style=" height:26px; margin-bottom:10px;">
+						<img src="images/mainspr_15.png" align="left"/>
+						<a href="#" style="float:right" class="a_more">查看更多</a>
+					</div>
+					<div id="active1" style=" width:185px; height:135px;background-image:url(images/1388482548_1436653066_24958_sSmallImgFile.jpg); float:left; margin-right:17px; cursor:pointer;">
+						<div class="overActive">
+								<div style="padding-left:20px; padding-top:10px; font-weight:bold;">活动简介</div>
+								<p style="font-size:12px; padding-left:20px;">
+								欢迎入驻全国高校排行榜<br />
+								参与“我要入驻高校”<br />
+								及“校园大使招募”活动
+								</p>
+								<div style="padding-left:20px; font-weight:bold;">查看详情</div>
+						</div>
+						<div class="half"><div style="padding-top:5px; font-weight:bold;">全国高校排行榜</div><div>已有3424931人关注</div></div>
+					</div>
+					<div id="active2" style=" width:185px; height:135px;background-image:url(images/1388405659_1436653066_10041_sSmallImgFile.jpg); float:left; margin-right:18px;cursor:pointer;" onmouseover="moveOverActive(this.id)">
+						<div class="overActive">
+							<div style="padding-left:20px; padding-top:10px; font-weight:bold;">活动简介</div>
+							<p style="font-size:12px; padding-left:20px;">
+							lol全明星投票以正<br />
+							式开始，每日投票可抽取<br />
+							精美皮肤
+							</p>
+							<div style="padding-left:20px; font-weight:bold;">查看详情</div>
+						</div>
+						<div class="half"><div style="padding-top:5px; font-weight:bold;">英雄联盟招行信用卡</div><div>已有1122053人关注</div></div>
+						
+					</div>
+					<div id="active3" style=" width:185px; height:135px;background-image:url(images/1396804927_1436653066_580_sSmallImgFile.jpg); float:left;cursor:pointer;" onmouseover="moveOverActive(this.id)">
+						<div class="overActive">
+							<div style="padding-left:20px; padding-top:10px; font-weight:bold;">活动简介</div>
+							<p style="font-size:12px; padding-left:20px;">
+							现在开通英雄联盟招行信<br />
+							用卡，享受三重大礼：好<br />
+							礼一，活动期间成功办理
+							</p>
+							<div style="padding-left:20px; font-weight:bold;">查看详情</div>
+						</div>
+						<div class="half"><div style="padding-top:5px; font-weight:bold;">2014全明星投票</div><div>已有1324002人关注</div></div>
+					</div>
+				</div>
+				<!--第一部分结束-->
+				<!--第二部分-->
+				<div style="margin-top:50px;">
+					<div style="height:26px; margin-bottom:10px;">
+						<img src="images/mainspr_22.png" />
+						<a href="#" style="float:right" class="a_more">查看更多</a>
+					</div>
+					<!--赛事中心菜单-->
+					<div id="matchMenu" style="height:60px;">
+						<div class="match_menu" style="border-left:1px solid #C8C8C8;" onmouseover="switchMatch(this,'match1','matchMenu','matchPart')">职业联赛</div>
+						<div class="match_menu" onmouseover="switchMatch(this,'match2','matchMenu','matchPart')">甲级联赛</div>
+						<div class="match_menu" onmouseover="switchMatch(this,'match3','matchMenu','matchPart')">德玛西亚杯</div>
+						<div class="match_menu" onmouseover="switchMatch(this,'match4','matchMenu','matchPart')">高校联赛</div>
+						<div class="match_menu" onmouseover="switchMatch(this,'match5','matchMenu','matchPart')">城市争霸赛</div>
+						<div class="match_menu" onmouseover="switchMatch(this,'match6','matchMenu','matchPart')" style="border-right:1px solid #C8C8C8;">QQ网吧联赛</div>
+					</div>
+					<!--赛事内容-->
+					<div id="matchPart">
+						<div id="match1" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8;">
+							<div style="width:180px; height:250px; float:left;">
+								<div style="background-image:url(images/1393476941256428541.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">2014英雄联盟职业联赛夏季赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">375110</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-06-14-2014-08-24</div>
+									<div>地点：上海同济大学</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">第二届全国高校联赛落幕 福建闽江学院卫冕冠军</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛总决赛 闽江2比0成功卫冕</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">高校总决赛结束 福建闽江完美优势成功卫冕</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛总决赛 福建闽江先下一城</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛粉丝齐聚草莓备受女玩家追捧</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="match2" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="width:180px; height:250px; float:left">
+								<div style="background-image:url(images/1393476150717462898.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">2014英雄联盟甲级职业联赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">4203842</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-06-10-2014-08-14</div>
+									<div>地点：广东深圳</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">【LSPL】大龙战执行力助EP.C全取三分</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【LSPL】锤石神钩助EP.C惊险击败KX.H</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【LSPL】卡萨丁主宰全场 King追平比分</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【LSPL】EP五十分钟鏖战险胜King.TC</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【LSPL】PE一级团力挫WOA强行拿下3分</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="match3" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="width:180px; height:250px; float:left">
+								<div style="background-image:url(images/1388456923400451352.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">第二届德玛西亚杯职业锦标赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">233621</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-06-09-2014-12-07</div>
+									<div>地点：深圳</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">【德杯】打破僵局的大龙 EP.C再胜VG.P</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【德杯】莫甘娜大显神威 EP.C击败VG.P拿下首场</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【德杯】从头到尾节奏压制 VG.S稳扎稳打胜EP</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【德杯】盲僧日女抓爆 三路VG.S还以颜色击败EP</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【德杯】赛事前瞻：LSPL豪强VG vs EP</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="match4" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="width:180px; height:250px; float:left">
+								<div style="background-image:url(images/1388626498808462210.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">第二届全国高校联赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">837492</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-02-22-2014-05-25</div>
+									<div>地点：线下</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">第二届全国高校联赛落幕 福建闽江学院卫冕冠军</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛总决赛 闽江2比0成功卫冕</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">高校总决赛结束 福建闽江完美优势成功卫冕</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛总决赛 福建闽江先下一城</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">LOL高校联赛粉丝齐聚草莓备受女玩家追捧</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="match5" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="width:180px; height:250px; float:left">
+								<div style="background-image:url(images/1394455104774430703.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">第六届城市英雄争霸赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">598302</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-02-01-0000-00-00</div>
+									<div>地点：线下</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">【黑龙江】红牛杯英雄联盟城市挑战赛激战正酣</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【河南】05月31日06月01日2014首届乐天杯英雄联盟赛</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【浙江】红牛全城约战SOLO排位战第二季精彩不断</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【浙江】台州童玩节英雄联盟电子竞技大赛召唤师召集中</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【湖南】2014“好棒美杯”株洲英雄联盟争霸赛总决赛预</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="match6" style=" width:588px; height:250px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="width:180px; height:250px; float:left">
+								<div style="background-image:url(images/1395962711555588127.jpg); width:160px; height:158px; position:absolute; margin-top:20px; margin-left:10px;"></div>
+								<div style="background-image:url(images/mainspr_33.png); width:162px; height:37px; margin:auto; position:absolute; margin-top:190px; margin-left:10px; text-align:center; color:white; line-height:37px;">
+									进入赛事页面
+								</div>
+							</div>
+							<div style="height:250px; width:406px; float:left;">
+								<div id="match_title" style=" position:absolute; margin-top:20px; margin-left:10px;">
+									<a href="#">第三届QQ网吧冠军联赛</a>
+									<div style="position:absolute; width:100px; height:100px; background-image:url(images/mainspr_02.png); width:129px; height:66px; margin-left:284px; margin-top:-20px;">
+										<div style="color:white; font-size:17px; text-align:center; margin-top:10px;">634012</div>
+										<div style="color:#003E3E; text-align:center;">关注</div>
+									</div>
+									<div>时间：2014-03-22-2014-11-30</div>
+									<div>地点：线下</div>
+								</div>
+								<table border="0" id="match_content" cellpadding="0" cellspacing="0" style="position:absolute; margin-top:90px; margin-left:10px;">
+									<tr height="25">
+										<td width="330"><a href="#">【网吧联赛】南京LOL主题网吧助阵城市赛 可爱Coser现</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【网吧联赛】屌丝也有春天 网吧联赛蚌埠城市赛火爆收官</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【网吧联赛】空前火爆 美女辅助、异国选手现身赛场</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【网吧联赛】英特尔杯网吧联赛东莞城市初赛引发豪门争</a></td>
+										<td>06/04</td>
+									</tr>
+									<tr height="25">
+										<td><a href="#">【网吧联赛】杰拉网咖助阵英特尔杯网吧联赛 推广全民电</a></td>
+										<td>06/04</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!--赛事内容结束-->
+				</div>
+				<!--第二部分结束-->
+				<!--第三部分-->
+				<div id="custom">
+					<div style="height:26px; margin-bottom:10px; margin-top:40px;">
+						<img src="images/mainspr_29.png" />
+						<div style="float:right">
+							<a href="#" style="margin-right:15px;" class="a_more">Q游助手</a>|<a href="#" style="margin-left:15px" class="a_more">QQ在线客服</a>
+						</div>
+					</div>
+					<!--菜单-->
+					<div style="height:40px;">
+						<div style="float:left; width:100px; border-left:1px solid #C8C8C8" class="custom_menu">常见问题</div>
+						<div style="float:left; width:100px;" class="custom_menu">自助服务</div>
+						<div style="float:left; width:388px; border-right:1px solid #C8C8C8; text-align:right" class="custom_menu">
+							<a href="#" style="margin-right:15px">游戏相关</a>|
+							<a href="#" style="margin-right:15px; margin-left:15px">账号相关</a>|
+							<a href="#" style="margin-right:10px; margin-left:15px">电脑及其他问题</a>
+						</div>
+					</div>
+					<!--内容-->
+					<div id="custom_content">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-left:10px; margin-top:20px;">
+							<tr height="25">
+								<td><a href="#">弹出“Adobe flash player设置”提示无法</a></td>
+								<td><a href="#">英雄联盟有哪些情况会被封号惩罚</a></td>
+							</tr>
+							<tr height="25">
+								<td><a href="#">英雄联盟排位赛/晋级赛规则</a></td>
+								<td><a href="#">为什么英雄联盟选完区后客户端闪退</a></td>
+							</tr>
+							<tr height="25">
+								<td><a href="#">英雄联盟冲值充错大区了怎么办？</a></td>
+								<td><a href="#">英雄联盟登录提示未知错误，怎么办</a></td>
+							</tr>
+							<tr height="25">
+								<td><a href="#">英雄联盟（LOL）游戏崩溃如何处理？</a></td>
+								<td><a href="#">为什么英雄联盟登录会出现乱码</a></td>
+							</tr>
+							<tr height="25">
+								<td><a href="#">英雄联盟对电脑配置有什么要求？</a></td>
+								<td><a href="#">为什么登录英雄联盟提示证书过期</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--第三部分结束-->
+			</div>
+			<!--左边层结束-->
+			
+			<!--右边层-->
+			<div style="width:348px; float:left; margin-top:40px; margin-left:40px">
+				<!--第一部分-->
+				<div style=" height:26px; margin-bottom:10px;">
+					<img src="images/mainspr_27.png" align="left"/>
+					<a href="#" style="float:right" class="a_more">查看更多</a>
+				</div>
+				<table border="0" cellpadding="0" cellspacing="0" id="heroTab">
+					<tr>
+						<td style="padding-bottom:4px; cursor:pointer;">
+							<div class="overHero">冰晶凤凰</div>
+							<img src="images/34_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">皮城女警</div>
+							<img src="images/51_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">祖安狂人</div>
+							<img src="images/36_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">蜘蛛女王</div>
+							<img src="images/60_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">虚空行者</div>
+							<img src="images/38_Web_0.jpg" height="65"/>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom:4px; cursor:pointer;">
+							<div class="overHero">仙灵女巫</div>
+							<img src="images/117_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">战争之王</div>
+							<img src="images/80_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">水晶先锋</div>
+							<img src="images/72_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">宝石骑士</div>
+							<img src="images/44_Web_0.jpg" height="65"/>
+						</td>
+						<td style="padding-bottom:4px; padding-left:4px; cursor:pointer;">
+							<div class="overHero">嗜血猎手</div>
+							<img src="images/19_Web_0.jpg" height="65"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" class="news-type" align="right" style="font-size:12px">免费时间：2014-06-13 至 2014-06-20</td>
+					</tr>
+				</table>
+				<!--第一部分结束-->
+				<!--第二部分开始-->
+				<div style="margin-top:20px">
+					<div style=" height:26px; margin-bottom:10px;">
+						<img src="images/mainspr_22-10.png" align="left"/>
+						<a href="#" style="float:right" class="a_more">查看更多</a>
+					</div>
+					<!--战争学院菜单-->
+					<div id="warMenu" style="height:66px;">
+						<div class="match_menu" style="border-left:1px solid #C8C8C8; width:173px" onmouseover="switchMatch(this,'profressionMatch','warMenu','warPart')">职业联赛</div>
+						<div class="match_menu" style="width:173px;border-right:1px solid #C8C8C8;" onmouseover="switchMatch(this,'groupAMatch','warMenu','warPart')">甲级联赛</div>
+					</div>
+					<!--战争学院内容-->
+					<div id="warPart">
+						<div id="profressionMatch" style="height:310px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8">
+							<div style="height:105px; ">
+								<div style="background-image:url(images/1401068262290195172.jpg); width:148px; height:90px; position:absolute; margin-left:17px; margin-top:15px;"></div>
+								<div style="background-image:url(images/1401068281691329928.jpg); width:148px; height:90px; position:absolute; margin-left:182px; margin-top:15px;"></div>
+							</div>
+							<div style=" margin-top:25px">
+								<input type="radio" name="typesel" style="margin-left:17px;"/>经典模式
+								<input type="radio" name="typesel" style="margin-left:17px;"/>极地大乱斗
+								<select style="margin-left:35px">
+									<option>本周免费英雄</option>
+								</select>
+							</div>
+							<table border="0" cellpadding="0" cellspacing="0" style="margin-top:10px; margin-left:17px;">
+								<tr height="25">
+									<td><a href="#">瓦罗兰大陆的灵魂收割者：锤石上</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">娜美S4辅助攻略 我仍然能够听见大</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">S4皮城执法官打野入门心得 先打一</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">妹子上分英雄谱 打野蔚大型进阶攻</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">皮城执法官打野入门心得</a></td>
+								</tr>
+							</table>
+						</div>
+						<div id="groupAMatch" style="height:310px;border-left:1px solid #C8C8C8; border-bottom:1px solid #C8C8C8; border-right:1px solid #C8C8C8; display:none;">
+							<div style="height:105px; ">
+								<div style="background-image:url(images/1392578573610109132.jpg); width:148px; height:90px; position:absolute; margin-left:17px; margin-top:15px;"></div>
+								<div style="background-image:url(images/1392578594346842627.jpg); width:148px; height:90px; position:absolute; margin-left:182px; margin-top:15px;"></div>
+							</div>
+							<div style=" margin-top:25px">
+								<input type="radio" name="typesel" style="margin-left:17px;"/>经典模式
+								<input type="radio" name="typesel" style="margin-left:17px;"/>极地大乱斗
+								<select style="margin-left:35px">
+									<option>选择解说</option>
+								</select>
+							</div>
+							<table border="0" cellpadding="0" cellspacing="0" style="margin-top:10px; margin-left:17px;">
+								<tr height="25">
+									<td><a href="#">小树解说：大魔王faker附体 劫王者</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">伪伪酱解说：小孩游神 教你卢锡安</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">冷小莫解说：杀人仅0.5秒 五杀爆发</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">小漠解说：三线跑轰四杀暴走</a></td>
+								</tr>
+								<tr height="25">
+									<td><a href="#">JY解说：螳螂一Q一管血版本强势人</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<!--战争学院内容结束-->
+				</div>
+				<!--第二部分结束-->
+				<div style="margin-top:30px; margin-bottom:10px;">
+					<img src="images/1388641716767393855.jpg" />
+				</div>
+				<div>
+					<img src="images/1388641599893353099.jpg" />
+				</div>
+			</div>
+			<!--右边层结束-->
+		</div>
+		<!--中间部分结束-->
+		<!--页脚-->	
+		<div id="foot" style=" margin-top:20px">
+			<hr color="#CCCCCC"/>
+			<div style=" margin-top:20px;">
+	<a href="#">腾讯互动娱乐</a>|<a href="#">服务条款</a>|<a href="#">广告服务</a>|<a href="#">腾讯游戏招聘</a>|<a href="#">腾讯游戏客服</a>|<a href="#">游戏活动</a>|<a href="#">游戏地图</a>|<a href="#">商务合作</a>|<a href="#">腾讯网</a>|<a href="#">网站导航</a>
+			</div>
+			<div>
+				<span>COPYRIGHT&copy;1998 - 2014 TENCENT. ALL RIGHTS RESERVED.</span>
+				<span>腾讯公司版权所有</span>
+			</div>
+			<div>
+				&copy;2012 Riot Games, Inc. ALL RIGHTS RESERVED.
+				文网进字[2011] 004号 ISBN 978-7-89989-145-2|粤网文[2011]0483-070号
+			</div>
+		</div>
+		<!--页脚结束-->
+	</div>
+</body>
+<script>
+var menuOver = new Array("public-v2_09.png","public-v2_11.png","public-v2_13.png");
+var menuOut = new Array("public-v2_03.png","public-v2_05.png","public-v2_07.png");
+var noticeOver = new Array("mainspr_20.png","mainspr_26.png","mainspr_08.png","mainspr_04.png");
+var noticeOut = new Array("mainspr_11.png","mainspr_19.png","mainspr_13.png","mainspr_22-11.png");
+//改变背景图
+function changeBG(obj,imgPath){
+	$(obj).css("background-image","url(images/"+imgPath+")");
+}
+//切换内容
+function switchContent(obj,imgPath,parentId,visibleId){
+	changeBG(obj,imgPath);
+	$("#"+parentId+" > div").each(function(){
+		if(this.id == visibleId){
+			this.style.display = "block";
+		}
+		else{
+			this.style.display = "none";
+		}
+	});
+}
+//切换比赛
+function switchMatch(menu,visibleId,menuId,partId){
+	//加载样式，如果其他项存在当前样式则移除
+	$(menu).addClass("match_menu_over");
+	$("#"+menuId+" > div").each(function(){
+		if($(this).hasClass("match_menu_over") && this!= menu){
+			$(this).removeClass("match_menu_over");
+		}
+	});
+	$("#"+partId+" > div").each(function(){
+		if(this.id == visibleId){
+			this.style.display = "block";
+		}
+		else{
+			this.style.display = "none";
+		}
+	});
+}
+$(document).ready(function(){
+	//活动界面的鼠标移入事件
+	$("div[id^=active]").mouseenter(function(){
+		$("#"+this.id+" > div:first").css("display","block").animate({
+			"margin-top":"0px",
+			"height":"135px"
+			},"fast");
+	});
+	//活动界面的鼠标移出事件
+	$(".overActive").mouseleave(function(){
+		
+		$(this).css({"margin-top":"135px","height":"0px","display":"none"});
+	});
+	//英雄界面的鼠标移入
+	$("#heroTab td").mouseenter(function(){
+		
+		$(this).children("div:first").css("display","block");
+	}).mouseleave(function(){
+		$(this).children("div:first").css("display","none");
+	});
+	
+	//页眉菜单隐藏
+	$("div[id^=headMenu]").mouseleave(function(){
+		$(this).slideUp("fast");
+	});
+});
+
+//左移动距离
+var len1 = -590;
+//当前移动距离
+var nowMove = 0;
+//右移动距离
+var len2 = 590;
+//移动方向 0向左 1向右
+var side = 0;
+function move(){
+	
+	//图片循环的方式
+	/*if($("#ad").)
+	$("#ad").animate({
+		"margin-left":"-590px"
+	},1000,function(){
+		$("#ad").css("margin-left","0px");
+		$("#ad").find("a:first").appendTo("#ad");
+	});
+	window.setTimeout("move()",3500);*/
+	
+	
+	//两头来回移动的方式
+	//如果移动到最后张图片
+	/*if(nowMove == len1*4){
+		//向右移动
+		side = 1;
+	}
+	if(nowMove == 0){
+		side = 0;
+	}
+	if(side == 1){
+		nowMove = nowMove+len2;
+	}
+	else{
+		nowMove = nowMove+len1;
+	}
+	$("#ad > a:first").animate({
+		"margin-left":nowMove+"px"
+	},1000);
+	
+	window.setTimeout("move()",3000);*/
+	
+	//图片移动最后一拉到头的方式
+	nowMove = nowMove+len1;
+	if(nowMove == len1*5){
+		nowMove = 0;
+	}
+	$("#ad > a:first").animate({
+		"margin-left":nowMove+"px"
+	},1000);
+	
+	window.setTimeout("move()",3000);
+}
+move();
+
+function headMenuOver(obj){
+	//隐藏已经显示的菜单
+	$("div[id^=headMenu]:visible").slideUp("fast");
+	$(obj).next("div:first").slideDown("fast");
+}
+
+</script>
+</html>

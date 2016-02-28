@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+<style>
+.menu{
+	width:118px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	position:relative;
+	float:left;
+	cursor:hand;
+}
+</style>
+<body>
+<div style="width:590px;">
+	<!--图片层-->
+	<div id="ad" style="white-space:nowrap; width:590px; height:280px; overflow:hidden;">
+    	<img src="images/1.jpg"/><img src="images/2.jpg" /><img src="images/3.jpg" /><img src="images/4.jpg" /><img src="images/5.jpg" />
+    </div>
+    <!--按钮背景色层-->
+    <div style="background-color:#0F0; opacity:0.2; height:30px; line-height:30px; position:relative; top:-30px;"></div>
+    <!--滑动按钮层-->
+     <div id="btn" style="width:118px; height:30px; position:relative; top:-60px; background-color:#09F"></div>
+     <!--按钮选项层-->
+     <div style="position:relative;top:-90px;" id="num">
+     	<div class="menu">1</div>
+        <div class="menu">2</div>
+        <div class="menu">3</div>
+        <div class="menu">4</div>
+        <div class="menu">5</div>
+     </div>
+</div>
+</body>
+<script>
+	
+	var imgWidth = -590;
+	var btnWidth = 118;
+	var index = 0;
+	var toLeft = true;
+	var timer;
+	function changeImg(loc){
+		if(toLeft == true){
+			loc++;
+			if(loc >= 4){
+				toLeft = false;
+				loc = 4;
+				
+			}
+		}
+		else{
+			loc--;
+			if(loc <= 0){
+				toLeft = true;	
+				loc = 0;	
+			}	
+		}	
+		index = loc;
+		//显示下一张图片
+		$("#ad>img:first").animate({
+			"marginLeft":imgWidth*loc
+		},1000);
+		//按钮移动
+		$("#btn").animate({
+			"marginLeft":btnWidth*loc
+		},1000);
+		timer = window.setTimeout("changeImg(index)",2000);
+	}
+	
+	changeImg(index);
+	
+	$("#num>div").each(function(i){
+		$(this).mouseenter(function(){
+			window.clearTimeout(timer);
+			index = i;
+			stopTime(i);
+		}).mouseleave(function(){
+			timer = window.setTimeout("changeImg(index)",2000);	
+		})	
+	});
+	
+	function stopTime(i){
+		$("#ad>img:first").animate({
+			"marginLeft":imgWidth*i
+		},10);
+		$("#btn").animate({
+			"marginLeft":btnWidth*i
+		},10);
+	}
+</script>
+</html>

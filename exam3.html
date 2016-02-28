@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="jquery-1.6.js"></script>
+
+<style>
+#nav a{ display:block; width:150px; height:30px; line-height:30px; background-color:#333; text-decoration:none; text-align:center; color:#FFF; font-weight:bold; border:1px solid white;}
+</style>
+<body>
+<div id="div1">
+	第一个层
+</div>
+<div id="div2">
+	第二个层
+	<div id="div3">内嵌的层</div>
+</div>
+<div id="div4">
+	<div id="div5"></div>
+</div>
+<div>
+	<table>
+    	<tr>
+        	<td>a</td>
+            <td>b</td>
+        </tr>
+        <tr>
+        	<td>ac</td>
+            <td>d</td>
+        </tr>
+    </table>
+</div>
+<div>
+	<table>
+    	<tr>
+        	<td>f</td>
+            <td>b</td>
+        </tr>
+        <tr>
+        	<td>c</td>
+            <td>d</td>
+        </tr>
+    </table>
+</div>
+<hr />
+<div id="nav">
+	<div style="float:left">
+        <div onmouseover="overMenu(this)" onmouseout="out(this)"><a href="#">菜单选项1</a></div>
+        <div style="display:none" class="menu">
+            <a href="#">菜单1</a><br />
+            <a href="#">菜单2</a><br />
+            <a href="#">菜单3</a><br />
+            <a href="#">菜单4</a><br />
+        </div>
+    </div>
+    <div style="float:left">
+        <div onmouseover="overMenu(this)"><a href="#">菜单选项2</a></div>
+        <div style="display:none" class="menu">
+            <a href="#">菜单5</a><br />
+            <a href="#">菜单6</a><br />
+            <a href="#">菜单7</a><br />
+            <a href="#">菜单8</a><br />
+        </div>
+    </div>
+    <div style="float:left">
+        <div onmouseover="overMenu(this)"><a href="#">菜单选项3</a></div>
+        <div style="display:none" class="menu">
+            <a href="#">菜单9</a><br />
+            <a href="#">菜单10</a><br />
+            <a href="#">菜单11</a><br />
+            <a href="#">菜单12</a><br />
+        </div>
+    </div>
+</div>
+<script>
+//contains用来匹配包含指定文本内容的对象
+//alert($("div:not(:contains(第))").html());
+//获取不包含子元素或者文本内容的div
+//$("div:empty").each(function(){
+//	alert(this.id);
+//})
+//获取包含子元素或者是文本内容的div,empty和parent的功能截然相反
+//$("div:parent").each(function(){
+//	alert(this.id);
+//})
+//$("div:not(:empty)").each(function(){
+//	alert(this.id);
+//})
+
+//获取包含了div标签的div对象
+//$("div:has(div)").each(function(){
+//	alert(this.id);	
+//})
+
+//获取包含表格并且表格列中包含字母a的div
+//alert($("div:has(table>tbody>tr>td:contains(a))").html());
+
+//获取页面中所有被隐藏的菜单
+//$(".menu:hidden").each(function(){
+//	alert($(this).html());	
+//})
+
+function overMenu(obj){
+	//将对应的菜单显示
+	$(obj).next().show();
+	//将此时已经显示的菜单隐藏
+	$(".menu:visible").not($(obj).next()).hide();
+}
+
+function out(obj){
+	$(obj).next().hide();
+}
+</script>
+</body>
+</html>

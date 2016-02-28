@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script src="../jquery-1.6.js"></script>
+<style>
+.navigator{
+	width:150px;	
+}
+.navigator a{
+	display:block;
+	width:150px;
+	height:30px;
+	line-height:30px;
+	background-color:#E4E4E4;
+	color:#000;
+	text-align:center;
+	text-decoration:none;
+}
+</style>
+<body>
+
+<div>
+	<div class="navigator">
+    	<div><a href="#">主菜单1</a></div>
+        <div>
+        	<a href="#">子菜单1.1</a>
+        	<a href="#">子菜单1.2</a>
+            <a href="#">子菜单1.3</a>
+        </div>
+    </div>
+    <div class="navigator">
+    	<div><a href="#">主菜单2</a></div>
+        <div>
+        	<a href="#">子菜单2.1</a>
+        	<a href="#">子菜单2.2</a>
+            <a href="#">子菜单2.3</a>
+        </div>
+    </div>
+    <div class="navigator">
+    	<div><a href="#">主菜单3</a></div>
+        <div>
+        	<a href="#">子菜单3.1</a>
+        	<a href="#">子菜单3.2</a>
+            <a href="#">子菜单3.3</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	//隐藏子菜单
+	$(".navigator>div:odd").hide();
+	//显示子菜单
+	$(".navigator").mouseenter(function(){
+		$(this).find("div:eq(1)").slideDown();	
+		$(".navigator").not($(this)).each(function(){
+			$(this).find("div:eq(1):visible").slideUp();
+		});
+	});
+</script>
+</html>
